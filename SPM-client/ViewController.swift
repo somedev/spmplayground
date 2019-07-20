@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     private let label = UILabel(frame: .zero)
     private let generator = Generator()
     
+    private var timer:Timer? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +30,15 @@ class ViewController: UIViewController {
         label.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor).isActive = true
         label.heightAnchor.constraint(greaterThanOrEqualToConstant: 0).isActive = true
         
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] _ in
+            self?.processTimer()
+        })
+    }
+}
+
+private extension ViewController {
+    func processTimer() {
+        label.text = generator.generate()
     }
 }
 
