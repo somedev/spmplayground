@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "library",
+        "repositoryURL": "https://github.com/somedev/spmplayground-library",
+        "state": {
+          "branch": "master",
+          "revision": "b432bfb94847de537ff80381dea5b9981b04dd0a",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

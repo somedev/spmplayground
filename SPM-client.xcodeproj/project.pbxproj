@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		6410824D22E316F3005D7FA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6410824B22E316F3005D7FA5 /* Main.storyboard */; };
 		6410824F22E316F6005D7FA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6410824E22E316F6005D7FA5 /* Assets.xcassets */; };
 		6410825222E316F6005D7FA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6410825022E316F6005D7FA5 /* LaunchScreen.storyboard */; };
+		6484A8CE22E3200400023DBF /* library in Frameworks */ = {isa = PBXBuildFile; productRef = 6484A8CD22E3200400023DBF /* library */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6484A8CE22E3200400023DBF /* library in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "SPM-client";
+			packageProductDependencies = (
+				6484A8CD22E3200400023DBF /* library */,
+			);
 			productName = "SPM-client";
 			productReference = 6410824222E316F3005D7FA5 /* SPM-client.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 6410823922E316F3005D7FA5;
+			packageReferences = (
+				6484A8CC22E3200400023DBF /* XCRemoteSwiftPackageReference "spmplayground-library" */,
+			);
 			productRefGroup = 6410824322E316F3005D7FA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6484A8CC22E3200400023DBF /* XCRemoteSwiftPackageReference "spmplayground-library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/somedev/spmplayground-library";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6484A8CD22E3200400023DBF /* library */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6484A8CC22E3200400023DBF /* XCRemoteSwiftPackageReference "spmplayground-library" */;
+			productName = library;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6410823A22E316F3005D7FA5 /* Project object */;
 }
